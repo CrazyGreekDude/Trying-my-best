@@ -1,0 +1,83 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<title>clock</title> 
+	 <style type="text/css"> 
+     body{}
+    </style>
+	</head>
+<body>
+
+
+        <div style="clear: left"></div>
+        <p id="demo"></p>
+
+             <p>Count: <span id="soldier">0</span> <br>
+
+             <span id="soldiertimer">10</span> sec <br>
+
+             <span id="progress"></span></p>
+
+            <button onclick="setInterval(countdown,1000)"> Train soldier</button>
+           
+
+            <script>
+            var myVar = setInterval(myTimer, 1000);
+            
+            function myTimer() {
+                var d = new Date();
+                document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+            }
+            
+
+
+            function countdown(lel) {
+
+                lel=document.getElementById("soldiertimer").innerHTML;
+                    if (lel>0) {
+                    lel--;
+                    soldiertimer.innerHTML=lel;
+
+                    switch (lel){
+                        case 10:
+                        case 9:
+                        progress.innerHTML="_____" 
+                        break;
+                        case 8:
+                        case 7:
+                        progress.innerHTML="~____" 
+                        break;
+                        case 6:
+                        case 5:
+                        progress.innerHTML="~~___" 
+                        break;                        
+                        case 4:
+                        case 3:
+                        progress.innerHTML="~~~__" 
+                        break;
+                        case 2:
+                        case 1:
+                        progress.innerHTML="~~~~_" 
+                        break;
+                        default:
+                        progress.innerHTML="_____" 
+                        break;
+
+                    }
+
+                }else{
+
+                progress.innerHTML="New soldier!";
+
+                soldier.innerHTML++;
+                soldiertimer.innerHTML="10";
+                }
+                return;
+
+            }
+            </script>
+
+
+ 
+</body>
+</html>
